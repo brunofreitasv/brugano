@@ -11,18 +11,16 @@ export const  Form = (props) => {
   const [picture, setPicture] = useState('');
   const [team, setTeam] = useState('');
 
-  const teams = [
-    'Mestres do Disfarce',
-    'Cripto-hackers',
-    'Hackers da Rede',
-    'Desenvolvedores Felinos'
-  ]
-
   const save = (event) => {
     event.preventDefault()
     props.onRegister({
       name, nickname, mantra, picture, team
     });
+    setName('');
+    setNickname('');
+    setMantra('');
+    setPicture('');
+    setTeam('');
   }
 
   return (
@@ -33,7 +31,7 @@ export const  Form = (props) => {
         <TextBox required={true} label="Apelido Hacker" placeholder="Seu apelido hacker" value={nickname} userTyping={v => setNickname(v)} />
         <TextBox required={true} label="Mantra Hacker" placeholder='Seu mantra. Ex: "a internet é a minha caixa de areia"' value={mantra} userTyping={v => setMantra(v)} />
         <TextBox label="Foto" placeholder="Endereço da sua foto (com óculos escuros, se possível)" value={picture} userTyping={v => setPicture(v)} />
-        <DropDown label="Time" items={teams} value={team} selectionChanged={v => setTeam(v)} />
+        <DropDown label="Time" items={props.teams} value={team} selectionChanged={v => setTeam(v)} />
         <Button>
           Criar card
         </Button>
