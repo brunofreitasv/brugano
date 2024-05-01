@@ -1,13 +1,73 @@
+CSS
+/* General form styles */
 .form-base {
-    display: flex;
-    justify-content: center;
-    margin: 80px 0px;
+  display: flex;
+  justify-content: center;
+  margin: 80px 0;
 }
 
 .form-base form {
-    max-width: 80%;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    padding: 36px 64px;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+  max-width: 80%;
+  background-color: #fff; /* Light background like Material UI cards */
+  border-radius: 4px; /* Rounded corners like Material UI components */
+  padding: 32px 24px; /* Similar padding to Material UI forms */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Input field styles */
+.form-base input[type="text"],
+.form-base input[type="url"] {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ccc; /* Light border for inputs */
+  border-radius: 4px;
+  font-size: 16px; /* Similar font size to Material UI text fields */
+  margin-bottom: 16px; /* Consistent spacing between fields */
+}
+
+.form-base input[type="text"]:focus,
+.form-base input[type="url"]:focus {
+  outline: none; /* Remove default browser outline */
+  border: 1px solid #007bff; /* Blue border on focus for feedback */
+}
+
+/* Label styles */
+.form-base label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333; /* Darker text for labels */
+}
+
+/* Dropdown styles (assuming your DropDown component renders a select element) */
+.form-base select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.form-base select:focus {
+  outline: none;
+  border: 1px solid #007bff;
+}
+
+/* Button styles */
+.form-base button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #fff; /* White text like Material UI buttons */
+  background-color: #007bff; /* Primary blue color like Material UI */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-base button:hover {
+  background-color: #0067cc; /* Darker blue on hover for feedback */
 }

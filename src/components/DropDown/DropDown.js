@@ -4,7 +4,7 @@ export const  DropDown = (props) => {
   return (
     <div className='drop-down'>
         <label>{props.label}</label>
-        <select>
+        <select required={true} value={props.value} onChange={e => props.selectionChanged(e.target.value)}> 
             {props.items.map(i => 
             {
                 return (

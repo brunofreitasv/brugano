@@ -1,4 +1,4 @@
-## Projeto React para o curso da Alura: React - desemvolvendo com JavaScript
+## Projeto React para o curso da Alura: React - desenvolvendo com JavaScript
 
 ### Neste projeto, você encontrará:
 
