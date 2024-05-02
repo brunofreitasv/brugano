@@ -2,6 +2,7 @@ import Banner from './components/Banner'
 import Form from './components/Form';
 import React, { useState} from 'react';
 import Team from './components/Team';
+import Baseboard from './components/Baseboard';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           secundaryColor={t.secundaryColor}
           hackers={hackers.filter(h => h.team === t.name)} />)
       }
+      <Baseboard />
     </div>
   );
 }
