@@ -1,4 +1,5 @@
 .hacker {
+    position: relative;
     width: 280px;
 }
 
@@ -34,4 +35,16 @@
     line-height: 22px;
     color: #212121;
     padding: 0 16px;
+}
+
+.hacker .delete {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    opacity: 70%;
+}
+
+.hacker .delete:hover {
+    opacity: 100%;
+    cursor: pointer;
 }

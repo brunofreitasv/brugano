@@ -22,14 +22,21 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Form teams={teams.map(t => t.name)}onRegister={hacker => onNewHacker(hacker)} />
-      {
-        teams.map(t => <Team 
-          key={t.name} 
-          name={t.name} 
-          primaryColor={t.primaryColor} 
-          secundaryColor={t.secundaryColor}
-          hackers={hackers.filter(h => h.team === t.name)} />)
+      <Form teams={teams.map(t => t.name)} onRegister={hacker => onNewHacker(hacker)} />
+      { 
+        hackers.length > 0 && 
+        <section className='teams'>
+          <h1>Teams</h1>
+          {
+            teams.map(t => <Team 
+              key={t.name} 
+              name={t.name} 
+              primaryColor={t.primaryColor} 
+              secundaryColor={t.secundaryColor}
+              hackers={hackers.filter(h => h.team === t.name)} 
+              handleDelete={() => console.log("delete")} />)
+          }
+        </section>
       }
       <Baseboard />
     </div>
